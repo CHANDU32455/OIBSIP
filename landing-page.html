@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+         body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            background: url('') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Light Mode Styles */
+         body.light-mode {
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .navbar a {
+            float: right;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .navbar img {
+            float: left;
+            height: 50px;
+            margin-right: 30px; /* Adjust the margin as needed */
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 50px;
+        }
+
+        .photo {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .photo img {
+            width: 70%; /* Adjust the width as needed */
+            height: 600px; /* Maintain aspect ratio */
+            object-fit: cover;
+        }
+
+        .info {
+            flex: 1;
+            padding: 0 30px;
+            text-align: left;
+        }
+
+        .info h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .info p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 1em;
+            text-decoration: none;
+            color: #fff;
+            background-color: #333;
+            border: 1px solid #333;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        /* Skills Styles */
+        .skills {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .skills h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skills li {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="light-mode">
+
+<div class="navbar">
+    <img src="logo.png" alt="Your Logo">
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#experiences">Experiences</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+    <a onclick="toggleMode()">Toggle Mode</a>
+</div>
+
+<div class="content">
+    <div class="photo">
+        <!-- Placeholder image or any other image you'd like to use -->
+        <img class="profile-image" src="my image.jpg" alt="Placeholder Image">
+    </div>
+
+    <div class="info">
+        <h2>Hello, I'm Chandu Chitteti</h2>
+        <p>I am a cse student , persuing my btech at NBKRIST. Basically a python enthusiast.programming is one of my hobbie, became part and parcel of my dayu to day life...</p>
+
+        <div class="button-container">
+            <a href="#CONTACT" class="button">CONTACT ME</a>
+            <a href="#HIREME" class="button">HIRE ME</a>
+        </div>
+    </div>
+</div>
+
+<!-- Skills Section -->
+<div class="skills">
+    <h2>Skills</h2>
+    <ul>
+        <li>C</li>
+        <li>PYTHON</li>
+        <li>HTML/CSS</li>
+    </ul>
+</div>
+
+<!-- Footer Section -->
+<footer>
+    &copy; 2023 CHANDU| All Rights Reserved
+</footer>
+
+<script>
+    function toggleMode() {
+        document.body.classList.toggle('dark-mode');
+        document.body.classList.toggle('light-mode');
+    }
+</script>
+
+</body>
+</html>
